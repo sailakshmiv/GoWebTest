@@ -12,7 +12,7 @@
 	<script>
 
 	function sendCommond(commondName, commondArgs){
-		var data = [{"__PS_Commond__":commondName,"__PS_Commond_Args__":commondArgs}]
+		var data = [{"__PS_Command__":commondName,"__PS_Command_Args__":commondArgs}]
 		var sendData = JSON.stringify(data)
 		if(window.WebViewJavascriptBridge)
 		{
@@ -27,22 +27,22 @@
 
 	function sendShareCommond(fileUrl)
 	{
-		sendCommond("__PS_Commond_Share__",{"__PS_File_Url__":fileUrl})
+		sendCommond("__PS_Command_Share__",{"__PS_File_Url__":fileUrl})
 	}
 
 	function sendConcernCommond(type)
 	{
-		sendCommond("__PS_Commond_Cocern__", {"__PS_Concern_Type__":type})
+		sendCommond("__PS_Command_Cocern__", {"__PS_Concern_Type__":type})
 	}
 
 	function sendSaveToLocalCommond(fileUrl)
 	{
-		sendCommond("__PS_Commond_Save_To_Local__", {"__PS_File_Url__":fileUrl});
+		sendCommond("__PS_Command_Save_To_Local__", {"__PS_File_Url__":fileUrl});
 	}
 
 	function sendMakeItCommond(type)
 	{
-		sendCommond("__PS_Commond_Make__", {"__PS_Make_Type__":type})
+		sendCommond("__PS_Command_Make__", {"__PS_Make_Type__":type})
 	}
 
 
